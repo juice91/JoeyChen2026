@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joey Chen — Engineering Manager</title>
+<meta name="description" content="Joey Chen — Engineering Manager & Technical Leader. Multi-tenant B2B SaaS, global cloud architecture, IoT at scale, and team building.">
+<meta property="og:title" content="Joey Chen — Engineering Manager">
+<meta property="og:description" content="Hands-on engineering leader: global B2B SaaS, cloud architecture, IoT at scale, org building.">
+<meta property="og:type" content="website">
+<style>
+  :root{
+    --ink:#1a1a1a; --sub:#555; --muted:#777; --line:#e3e3e3;
+    --accent:#2b4a6f; --accent-soft:#eef2f7; --bg:#ffffff; --card:#ffffff;
+    --max:860px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --ink:#e8e8e8; --sub:#b0b0b0; --muted:#8a8a8a; --line:#2a2c30;
+           --accent:#7fa8d4; --accent-soft:#1a2634; --bg:#0f1114; --card:#14171b; }
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+    font-size:16px;
+  }
+  a{color:var(--accent); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 22px;}
+
+  /* Header */
+  header.hero{
+    background:linear-gradient(180deg,var(--accent-soft),transparent);
+    border-bottom:1px solid var(--line);
+    padding:56px 0 30px;
+  }
+  .hero h1{
+    font-size:clamp(30px,6vw,46px); margin:0; letter-spacing:.5px; font-weight:800;
+  }
+  .hero .tagline{
+    margin:8px 0 0; color:var(--sub); font-size:clamp(13px,2.4vw,16px);
+    letter-spacing:1.5px; text-transform:uppercase; font-weight:600;
+  }
+  .contact{margin-top:18px; display:flex; flex-wrap:wrap; gap:10px 18px; font-size:14.5px;}
+  .contact span,.contact a{color:var(--sub); display:inline-flex; align-items:center; gap:6px;}
+  .contact a:hover{color:var(--accent);}
+
+  /* Sections */
+  section{padding:34px 0; border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  h2{
+    font-size:13px; text-transform:uppercase; letter-spacing:2.5px; color:var(--accent);
+    margin:0 0 18px; font-weight:700;
+  }
+  p.lead{margin:0 0 14px; font-size:16.5px; color:var(--ink);}
+  p{margin:0 0 12px;}
+
+  /* Experience */
+  .job{margin-bottom:26px;}
+  .job:last-child{margin-bottom:0;}
+  .job-top{display:flex; flex-wrap:wrap; justify-content:space-between; gap:4px 14px; align-items:baseline;}
+  .job-top .role{font-size:18px; font-weight:700; margin:0;}
+  .job-top .dates{color:var(--muted); font-size:14px; white-space:nowrap;}
+  .job .org{color:var(--sub); font-size:14.5px; margin:2px 0 12px; font-style:italic;}
+  ul.pts{margin:0; padding:0; list-style:none;}
+  ul.pts li{position:relative; padding-left:20px; margin-bottom:10px; color:var(--ink);}
+  ul.pts li::before{content:""; position:absolute; left:2px; top:10px; width:6px; height:6px;
+    border-radius:50%; background:var(--accent);}
+  .tag{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.6px;
+    color:var(--accent); background:var(--accent-soft); border-radius:4px; padding:1px 7px; margin-right:7px;
+    vertical-align:1px;}
+
+  /* Skills */
+  .skillrow{margin-bottom:14px;}
+  .skillrow h3{font-size:13px; margin:0 0 8px; color:var(--sub); font-weight:700; letter-spacing:.4px;}
+  .chips{display:flex; flex-wrap:wrap; gap:7px;}
+  .chip{font-size:13px; padding:4px 11px; border:1px solid var(--line); border-radius:20px; color:var(--ink);}
+
+  /* Two column */
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:26px;}
+  @media (max-width:600px){ .grid2{grid-template-columns:1fr; gap:22px;} }
+
+  /* Product cards */
+  .products{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  @media (max-width:600px){ .products{grid-template-columns:1fr;} }
+  .pcard{border:1px solid var(--line); border-radius:10px; padding:15px 16px; background:var(--card);
+    transition:border-color .15s, transform .15s;}
+  .pcard:hover{border-color:var(--accent); transform:translateY(-2px);}
+  .pcard .pname{font-weight:700; font-size:15.5px; margin:0 0 5px; display:flex; align-items:center; gap:6px;}
+  .pcard p{font-size:13.5px; color:var(--sub); margin:0 0 10px;}
+  .pcard a.link{font-size:12.5px; font-weight:600; color:var(--accent); display:inline-flex; align-items:center; gap:4px;}
+
+  footer{padding:28px 0 44px; color:var(--muted); font-size:13px; text-align:center;}
+
+  @media print{
+    header.hero{background:none;}
+    .pcard:hover{transform:none;}
+    a{color:var(--ink);}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Joey Chen</h1>
+    <p class="tagline">Engineering Manager · Technical Leader · Builder</p>
+    <div class="contact">
+      <span>📍 Taiwan</span>
+      <a href="mailto:zeichenjoyce@gmail.com">✉ zeichenjoyce@gmail.com</a>
+      <a href="https://linkedin.com/in/joeyakk" target="_blank" rel="noopener">in/joeyakk ↗</a>
+      <a href="Joey_Chen_CV.pdf" download>⬇ Download PDF</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="summary">
+    <h2>Summary</h2>
+    <p class="lead">Hands-on engineering leader who drives architectural direction and builds autonomous teams that deliver without bottlenecks.</p>
+    <p>Built and staffed five engineering functions (Backend, Frontend, SRE, Security, Data) while leading architecture and delivery for a multi-tenant B2B SaaS platform serving 10M user accounts across 18,000 educational institutions in 130+ countries. Hired 20+ engineers with high yearly retention; currently leading ~17 engineers in product-aligned squads with end-to-end ownership.</p>
+    <p>Consistent track record of shipping across diverse, high-complexity domains — real-time collaboration infrastructure, IoT fleet management, identity and access control, and compliance programmes — without stalling product velocity.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Work Experience</h2>
+
+    <div class="job">
+      <div class="job-top">
+        <p class="role">Engineering Manager</p>
+        <span class="dates">2022 – Present</span>
+      </div>
+      <div class="org">ViewSonic / myViewBoard · Taiwan</div>
+      <ul class="pts">
+        <li><span class="tag">ORG</span>Built and staffed five engineering functions from scratch (Backend, Frontend, SRE, Security, Data); hired 20+ engineers with high yearly retention; organised ~17 engineers into product-aligned squads with end-to-end ownership.</li>
+        <li><span class="tag">SCALE</span>Grew the platform from 3,000 schools / 3M users (2021) to 18,000 institutions / 10M multi-tenant accounts across 130+ countries; scaled IoT device infrastructure ~4× from 80K to 300K+ concurrent Interactive Flat Panels; accelerated release cycles from weeks to within a day.</li>
+        <li><span class="tag">ARCHITECTURE</span>Architected the multi-tenant B2B SaaS platform with entity hierarchy, RBAC, and enterprise SSO (SAML, Azure AD) in compliance with FERPA, COPPA, GDPR, and PIPEDA; drove cloud adoption with AWS Solution Architects; aligned engineering practices to SOC 2.</li>
+        <li><span class="tag">ARCHITECTURE</span>Architected TeamOne's multi-region backend around isolated regional service clusters (Messaging, Data, File, Proxy) across US, EU, and Asia — keeping collaboration state local to cut latency and contain blast radius. Built on Elixir/WebSocket, Aurora Global Database, and OPA.</li>
+        <li><span class="tag">OPERATING MODEL</span>Enforced cloud governance via policy-as-code; standardised deployment across squads (release gates, change management, rollback, failover, post-deployment verification); replaced synchronous meetings with ADR-driven decisions.</li>
+        <li><span class="tag">MEASUREMENT</span>Built an AI-powered engineering metrics framework using MCP integrations across Azure DevOps, GitHub Actions, Jira, and OpsGenie — surfacing previously siloed DORA metrics; extended to track AI coding adoption across squads.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <p class="role">Senior Developer / Tech Lead</p>
+        <span class="dates">2016 – 2022</span>
+      </div>
+      <div class="org">ViewSonic / myViewBoard · Taiwan</div>
+      <ul class="pts">
+        <li>Led technical design of the microservices architecture, decomposing the platform along throughput boundaries so each service could scale independently.</li>
+        <li>Developed the centralised identity provider (IDP) with enterprise SSO (SAML, Azure AD, Google), RBAC, and multi-tenant entity hierarchy — powering login across ViewBoard OS, Whiteboard, Entity Management, and Device Manager.</li>
+        <li>Designed the real-time messaging layer over WebSocket and built the WebRTC-based wireless presentation system for screen sharing across IFPs and browsers.</li>
+        <li>Advanced CI/CD in Azure DevOps with DevSecOps gates — SonarQube (SAST), Dependabot, OWASP ZAP (DAST) — alongside Terraform IaC across multi-region AWS.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <p class="role">Associate Manager, Technical Dept.</p>
+        <span class="dates">Jan 2015 – Mar 2016</span>
+      </div>
+      <div class="org">KTC Technology · Zhuhai, China</div>
+      <ul class="pts">
+        <li>Engineered a real-time healthcare communication platform using XMPP for device-to-cloud messaging, presence management, and telemedicine collaboration.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <p class="role">Earlier Career</p>
+      </div>
+      <ul class="pts">
+        <li>Lecturer, WPP School, Shanghai (2011–2015) · Senior System Developer, Medialand, China (2010–2011) · Contractor, WebGene, Taipei (2002–2007).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skillrow">
+      <h3>Cloud &amp; DevOps</h3>
+      <div class="chips">
+        <span class="chip">AWS</span><span class="chip">Terraform</span><span class="chip">Terragrunt</span>
+        <span class="chip">Azure DevOps</span><span class="chip">CI/CD</span><span class="chip">IaC</span><span class="chip">SAST/DAST</span>
+      </div>
+    </div>
+    <div class="skillrow">
+      <h3>Architecture &amp; Platforms</h3>
+      <div class="chips">
+        <span class="chip">System Design</span><span class="chip">Multi-tenant SaaS</span><span class="chip">Microservices</span>
+        <span class="chip">Event-driven systems</span><span class="chip">IoT device management</span><span class="chip">MQTT</span>
+      </div>
+    </div>
+    <div class="skillrow">
+      <h3>Languages &amp; Data</h3>
+      <div class="chips">
+        <span class="chip">Go</span><span class="chip">Node.js</span><span class="chip">TypeScript</span><span class="chip">Python</span>
+        <span class="chip">Elixir</span><span class="chip">Rust</span><span class="chip">PostgreSQL</span><span class="chip">Aurora</span><span class="chip">EventStore</span>
+      </div>
+    </div>
+    <div class="skillrow">
+      <h3>Leadership &amp; Compliance</h3>
+      <div class="chips">
+        <span class="chip">Agile</span><span class="chip">OKRs</span><span class="chip">RACI</span>
+        <span class="chip">FERPA</span><span class="chip">COPPA</span><span class="chip">GDPR</span><span class="chip">PIPEDA</span><span class="chip">SOC 2 readiness</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="edu">
+    <div class="grid2">
+      <div>
+        <h2>Education</h2>
+        <p><strong>National Dong Hwa University</strong><br>Taiwan · B.S. in Physics</p>
+      </div>
+      <div>
+        <h2>Languages</h2>
+        <p>Chinese (Native)<br>English (Fluent for work)</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <h2>Product Context</h2>
+    <div class="products">
+      <div class="pcard">
+        <p class="pname">myViewBoard</p>
+        <p>Multi-tenant B2B SaaS for education. 18,000 institutions, 10M accounts, 130+ countries.</p>
+        <a class="link" href="https://myviewboard.com" target="_blank" rel="noopener">myviewboard.com ↗</a>
+      </div>
+      <div class="pcard">
+        <p class="pname">TeamOne</p>
+        <p>Enterprise collaborative whiteboard. Multi-region Elixir/WebSocket backend across US, EU, Asia.</p>
+        <a class="link" href="https://teamone.viewsonic.com" target="_blank" rel="noopener">teamone.viewsonic.com ↗</a>
+      </div>
+      <div class="pcard">
+        <p class="pname">Manager</p>
+        <p>IoT fleet management for 300K+ concurrent IFP devices via persistent MQTTS.</p>
+        <a class="link" href="https://www.viewsonic.com/us/myviewboard-manager" target="_blank" rel="noopener">viewsonic.com/us/myviewboard-manager ↗</a>
+      </div>
+      <div class="pcard">
+        <p class="pname">AirSync</p>
+        <p>Wireless screen mirroring and presentation for ViewSonic IFP devices.</p>
+        <a class="link" href="https://www.viewsonic.com/education/software/airsync" target="_blank" rel="noopener">viewsonic.com/education/software/airsync ↗</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  © <span id="yr"></span> Joey Chen · <a href="mailto:zeichenjoyce@gmail.com">zeichenjoyce@gmail.com</a>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
